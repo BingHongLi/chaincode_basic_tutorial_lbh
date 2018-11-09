@@ -1,0 +1,40 @@
+# Gopkg.toml example
+#
+# Refer to https://github.com/golang/dep/blob/master/docs/Gopkg.toml.md
+# for detailed Gopkg.toml documentation.
+#
+# required = ["github.com/user/thing/cmd/thing"]
+# ignored = ["github.com/user/project/pkgX", "bitbucket.org/user/project/pkgA/pkgY"]
+#
+# [[constraint]]
+#   name = "github.com/user/project"
+#   version = "1.0.0"
+#
+# [[constraint]]
+#   name = "github.com/user/project2"
+#   branch = "dev"
+#   source = "github.com/myfork/project2"
+#
+# [[override]]
+#   name = "github.com/x/y"
+#   version = "2.4.0"
+#
+# [prune]
+#   non-go = false
+#   go-tests = true
+#   unused-packages = true
+
+
+[prune]
+  go-tests = true
+  unused-packages = true
+
+
+[[constraint]]
+  # v1.0.5
+  name = "github.com/hyperledger/fabric"
+  revision = "014d6befcf67f3787bb3d67ff34e1a98dc6aec5f"
+
+[[constraint]]
+  name = "github.com/hyperledger/fabric-sdk-go"
+  revision = "614551a752802488988921a730b172dada7def1d"
