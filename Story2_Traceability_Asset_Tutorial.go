@@ -18,6 +18,7 @@ type TraceAsset struct {
 
 // 新增or更新資產
 // 預計輸入參數
+// "4","20181111","lbh","500","singleValentine"
 func (sc *SampleChaincode) putTraceAssetIntoBC(stub shim.ChaincodeStubInterface, args []string) sc.Response {
 
 	assetIdIsString, mfd, holder, transPriceIsString,other :=  args[0], args[1], args[2], args[3],args[4]
@@ -40,6 +41,7 @@ func (sc *SampleChaincode) putTraceAssetIntoBC(stub shim.ChaincodeStubInterface,
 
 // 取得資產
 // 預計輸入參數
+// "4"
 func (sc *SampleChaincode) getTraceAssetFromBC(stub shim.ChaincodeStubInterface, args []string) sc.Response {
 
 	assetIdIsString := args[0]
@@ -56,6 +58,7 @@ func (sc *SampleChaincode) getTraceAssetFromBC(stub shim.ChaincodeStubInterface,
 
 // 資產所有權轉讓
 // 預計輸入參數
+// "4","amanda"
 func (sc *SampleChaincode) changeTraceAssetIntoBC(stub shim.ChaincodeStubInterface, args []string) sc.Response {
 
 	assetIdIsString := args[0]
@@ -79,6 +82,7 @@ func (sc *SampleChaincode) changeTraceAssetIntoBC(stub shim.ChaincodeStubInterfa
 
 // 市場資產整體平均價格
 // 預計輸入參數
+// "1","4"
 func (sc *SampleChaincode) getAverageAssetPrice(stub shim.ChaincodeStubInterface, args []string) sc.Response {
 
 
@@ -112,6 +116,7 @@ func (sc *SampleChaincode) getAverageAssetPrice(stub shim.ChaincodeStubInterface
 
 
 // 特定資產的持有人歷史變化
+// "4"
 func (sc *SampleChaincode) getAssetHolderHistory(stub shim.ChaincodeStubInterface, args []string) sc.Response {
 
 

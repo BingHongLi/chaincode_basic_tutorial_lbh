@@ -26,6 +26,18 @@ func (sc *SampleChaincode) Invoke( stub shim.ChaincodeStubInterface) peer.Respon
 		return sc.getSampleAsset(stub, args)
 	} else if function == "getHistoryForSample" {
 		return sc.getHistorySampleAsset(stub, args)
+	}else if function == "putTA" {
+		return sc.putTraceAssetIntoBC(stub, args)
+	}else if function == "getTA" {
+		return sc.getTraceAssetFromBC(stub, args)
+	}else if function == "getTAAveragePrice" {
+		return sc.getAverageAssetPrice(stub, args)
+	}else if function == "simulateTA" {
+		return sc.simulateData(stub, args)
+	}else if function == "getTaHistoryHolder" {
+		return sc.getAssetHolderHistory(stub, args)
+	}else if function == "changeTaHolder" {
+		return sc.changeTraceAssetIntoBC(stub, args)
 	}
 
 	return shim.Error("Invalid Smart Contract function name.")
