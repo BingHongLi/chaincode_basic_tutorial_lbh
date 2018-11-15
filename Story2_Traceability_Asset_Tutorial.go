@@ -5,6 +5,7 @@ import (
 	"strconv"
 	"encoding/json"
 	"fmt"
+	sc "github.com/hyperledger/fabric/protos/peer"
 )
 
 /*
